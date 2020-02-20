@@ -7,8 +7,8 @@ In the project directory, you can run:
 ### `yarn start`
 
 Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-Open Service [json-server server1.json -p 3001 -w -d 500] foi utilizado,
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.<br>
+Open Service [json-server server1.json -p 3001 -w -d 500] foi utilizado,<br>
 Porta  Servidor http://localhost:3001.
 
 The page will reload if you make edits.<br />
