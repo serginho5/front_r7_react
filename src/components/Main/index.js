@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 import { Container } from './styles';
-import { CardImg, Card, CardText, CardMain, LinkCard } from './styles';
+import { CardImg, Card, CardText, CardMain, LinkCard, Good, Result } from './styles';
 
 function Main() {
   const [users, setUsers] = useState([]);
@@ -22,6 +22,16 @@ function Main() {
           <li key={user.__id}>
             <Card>
               <LinkCard>
+                <div className="result">
+                  <Good>
+                    <h3>GOSTAM</h3>
+                    <p>{user.positive} %</p>
+                  </ Good>
+                  <Result>
+                    <h3>NÃO GOSTAM</h3>
+                    <p>{user.negative} %</p>
+                  </ Result>
+                </div>
                 <CardMain>
                   <CardImg>
                     <img src={user.picture} alt="barbara" /></CardImg>

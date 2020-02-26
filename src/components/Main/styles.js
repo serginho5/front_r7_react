@@ -9,7 +9,11 @@ export const Container = styled.div`
 
    li{
      list-style: none;
-   }
+
+    &:nth-child(2n - 2) {
+      background: #d8d4d4;
+    }
+    }
 
 `;
 
@@ -18,9 +22,11 @@ export const Card = styled.div`
   align-items: center;
   padding: 10px;
   height: 85px;
+  position: relative;
 
-  &:hover  {
+  &:hover {
     background: #ba3638;
+    visibility: visible;
 
     h1 {
       color: #fff;
@@ -30,6 +36,34 @@ export const Card = styled.div`
     border: 4px solid #fff;
   }
 
+  &:hover .result {
+    position: absolute;
+    right: -221px;
+    top: 10px;
+    background: #fff;
+    visibility: visible;
+    width: 200px;
+    height: 65px;
+    display: flex;
+    border-radius: 4px;
+}
+ .result {
+    right: -160px;
+    position: absolute;
+    visibility: hidden;
+
+ &:after {
+  content: "";
+    position: absolute;
+    top: 7px;
+    transform: rotate(90deg);
+    left: -9%;
+    margin-left: 0px;
+    border-width: 9px;
+    border-style: solid;
+    border-color: #ba3638 transparent transparent transparent;
+ }
+ }
 `;
 
 export const CardMain = styled.div`
@@ -86,4 +120,29 @@ export const Link = styled.a`
 
 export const LinkCard = styled.a`
 
+`;
+
+export const Good = styled.div`
+   width: 45%;
+   border-right: 1px solid #666;
+
+h3 {
+    background: #ba3638;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 30px;
+}
+`;
+
+export const Result = styled.div`
+   width: 60%;
+
+h3 {
+    background: #ba3638;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 30px;
+}
 `;
